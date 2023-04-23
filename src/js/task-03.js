@@ -14,11 +14,13 @@ const images = [
 ];
 
 const galleryRef = document.querySelector(".gallery");
+
 const markup = images
   .map(
     ({ url, alt }) =>
       `<li><img src='${url}' alt='${alt}' height=220px class="gallery-img"></li>`
   )
   .join("");
+  
 galleryRef.insertAdjacentHTML("afterbegin", markup);
 
