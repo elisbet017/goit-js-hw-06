@@ -12,19 +12,19 @@ function onFormSubmit(event) {
 
   if (refs.email.value === "" || refs.password.value === "") {
     alert("Всі поля мають бути заповненими.");
+  } else {
+    const formElements = event.currentTarget.elements;
+
+    const email = formElements.email.value;
+    const password = formElements.password.value;
+
+    const formData = {
+      email,
+      password,
+    };
+
+    console.log(formData);
   }
-
-  const formElements = event.currentTarget.elements;
-
-  const email = formElements.email.value;
-  const password = formElements.password.value;
-
-  const formData = {
-    email,
-    password,
-  };
-
-  console.log(formData);
-
+  
   form.reset();
 }
